@@ -1,13 +1,384 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400&family=Montserrat:wght@300;400&family=Vollkorn&display=swap');
+
+
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; 
+}
+
+body{
+  font-family: 'Fredoka', sans-serif;
+  background-color: #111111;
+  color: white;
+  background-image: linear-gradient(70deg, #111111,#111111,#111111,#13174A, #ac5fdb);
+   background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; 
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+}
+
+
+
+/************************************************************Navbar**********************************************************************/
+.navbar-container{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.logo{
+  width: 30px;
+  height: 30px;
+}
+
+.nav-items{
+  list-style-type: none;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background: rgba( 255, 255, 255, 0.3 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 10px );
+  -webkit-backdrop-filter: blur( 10px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  
+}
+.nav-item{
+  color: #111111;
+  display: block;
+  padding:10px 20px;
+  font-size: larger;
+  text-decoration: none;
+  float: right;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+}
+.nav-item:hover{
+  background-color: #ac5fdb;
+  box-shadow: 0 0 5px #ac5fdb, 0 0 25px #ac5fdb;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.nav-left{
+  float: left;
+  margin: 0;
+  margin-left: 30px;
+  padding: 0;
+  padding-bottom: 0;
+}
+/************************************************************Navbar**********************************************************************/
+
+/************************************************************Home************************************************************************/
+/************************************************************main****************************************/
+.home-container{
+  position:relative;
+  margin-top: 70px;
+  
+
+}
+
+.prod-intro{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  padding: 0px 30px;
+  
+}
+
+.prod-left{
+  width: 40vw;
+  min-width: 400px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: left;
+  
+}
+
+.prod-left h2{
+  font-size: xxx-large;
+  padding-top: 50px;
+}
+
+.prod-left h4{
+  margin-top: 20px;
+  font-size:larger;
+}
+.prod-right{
+  width: 40vw;
+  min-width: 400px;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.prod-img{
+  width: 300px;
+  height: 300px;
+}
+/************************************************************main**************************************/
+/************************************************************services**********************************/
+.prod-services-bg{
+  background-image: linear-gradient(210deg, #ffffff,#eeeeee,#dddddd,#6DE0F6, #ac5fdb);
+  border-radius: 15px;
+}
+.prod-services{
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  padding: 0px 30px;
+  color: black;
+   background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 20px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 ); 
+}
+
+.prod-services .prod-right{
+  padding-top: 50px;
+}
+
+.prod-services h2{
+  font-size: xx-large;
+}
+
+.btn{
+  padding: 10px 50px;
+  background-color: black;
+  color: white;
+  font-size: medium;
+  border: none;
+  border-radius: 5px;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+}
+.btn:hover{
+  background-color: #ac5fdb;
+  box-shadow: 0 0 5px #ac5fdb, 0 0 25px #ac5fdb;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.btn-service{
+  margin: 10px;
+  padding: 20px 80px;
+}
+
+/************************************************************services**********************************/
+/************************************************************clients**********************************/
+.prod-client{
+  text-align: center;
+  padding: 50px;
+}
+
+.client-container{
+  margin: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.client-img{
+  width: 80px;
+  border-radius: 100%;
+}
+
+.client-name{
+  margin: 5px;
+}
+.client-designation{
+  margin: 3px;
+  color: #777777;
+}
+
+.client-review{
+  font-style: italic;
+  font-weight: 100;
+  text-align: center;
+}
+/************************************************************clients**********************************/
+/************************************************************contact**********************************/
+.prod-contact-bg{
+  background-image: linear-gradient(170deg, #ffffff,#eeeeee,#dddddd,#6DE0F6, #ac5fdb);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.prod-contact{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  background-color: white;
+  color: black;
+  padding-top: 50px;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 20px );
+  /* border-radius: 10px; */
+  border: 1px solid rgba( 255, 255, 255, 0.18 ); 
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  
+}
+.prod-contact .prod-right{
+  text-align: left;
+  padding-left: 50px;
+}
+/************************************************************clients**********************************/
+/************************************************************Home************************************************************************/
+
+
+/************************************************************About************************************************************************/
+
+.about-container{
+  margin-top: 70px;
+  text-align: left;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+/************************************************************About************************************************************************/
+
+/************************************************************Peoples**********************************************************************/
+
+.peoples-page-container{
+  position:relative;
+  margin-top: 70px;
+}
+
+.peoples-header{
+  width: 40vw;
+  min-width: 400px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: left;
+}
+.peoples-header h2{
+  font-size: xx-large;
+}
+
+.people-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around
+}
+
+.people-card{
+  /* border: 1px solid yellow; */
+  width: 275px;
+  padding: 10px;
+  margin: 10px;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 20px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 ); 
+  text-align: center;
+}
+
+.people-img-container{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.people-img{
+  width: 60px;
+  border-radius: 100%;
+}
+
+.people{
+  text-align: left;
+  padding-left: 5px;
+}
+.people-btn{
+  margin-top: 10px;
+  width: 250px;
+  text-align: center;
+  padding: 10px 40px;
+}
+
+/************************************************************Peoples**********************************************************************/
+
+/************************************************************Single person****************************************************************/
+
+.person-page-container{
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 25px;
+  /* height: 100vh; */
+  background: rgba(255, 255, 255, 0.116);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 20px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 ); 
+}
+
+.person-header-container{
+  /* border: red solid 1px; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+}
+
+.person-img-container{
+  text-align: right;
+  
+  /* border: yellow 1px solid; */
+}
+
+.person-img{
+  min-width: 210px;
+  /* height: 300px; */
+  border-radius: 8px;
+  width: 20vw;
+}
+
+.person-name{
+  font-size: xx-large;
+}
+
+.person-info-container{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 660px) {
+  .person-img-container{
+    text-align: center;
+    width: 660px;
+    margin-bottom: 20px;
+    /* border: yellow 1px solid; */
+  }
 }
