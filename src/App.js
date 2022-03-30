@@ -8,6 +8,7 @@ import Error from './pages/Error';
 import Services from './pages/Services';
 import Peoples from './pages/Peoples';
 import SinglePerson from './pages/SinglePerson';
+import Details from './pages/Details';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/about' element={<About/>}/>
         <Route path='/services' element={<Services/>}/>
         <Route path='/peoples' element={<Peoples/>}/>
+        <Route path='/details' element={<Details/>}/>
         <Route path='/person/:seed/:index' element={<SinglePerson/>}/>
         <Route path='*' element={<Error/>}/>
       </Routes>

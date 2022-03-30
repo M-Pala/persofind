@@ -53,7 +53,7 @@ function Home() {
           </div>
           <div className='prod-right'>
           <Link to='/peoples'><button className='btn btn-service'>See People</button><br/></Link>
-          <Link to='/peoples'><button className='btn btn-service'>See Details</button></Link>
+          <Link to='/details'><button className='btn btn-service'>See Details</button></Link>
           </div>
         </div>
       </div>

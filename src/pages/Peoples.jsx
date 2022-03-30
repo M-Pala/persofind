@@ -22,16 +22,16 @@ function Peoples() {
     fetchData()
   },[])
 
-  const peopleInfo = (seed,index)=>{
-    const seed_url = `https://randomuser.me/api/?results=18&seed=${seed}`
-    console.log(seed);
-    const getPeople = async ()=>{
-      const response = await fetch(seed_url)
-      const data = await response.json()
-      console.log(data.results[index]); 
-    }
-    getPeople()
-  }
+  // const peopleInfo = (seed,index)=>{
+  //   const seed_url = `https://randomuser.me/api/?results=18&seed=${seed}`
+  //   console.log(seed);
+  //   const getPeople = async ()=>{
+  //     const response = await fetch(seed_url)
+  //     const data = await response.json()
+  //     console.log(data.results[index]); 
+  //   }
+  //   getPeople()
+  // }
   return (
     <div className='peoples-page-container'>
         <div className='peoples-header'>
