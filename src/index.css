@@ -19,7 +19,8 @@ body{
   font-family: 'Fredoka', sans-serif;
   background-color: #111111;
   color: white;
-  background-image: linear-gradient(70deg, #111111,#111111,#111111,#13174A, #ac5fdb);
+  /* background-image: linear-gradient(70deg, #111111,#111111,#111111,#13174A, #ac5fdb); */
+  background-image: linear-gradient(10deg, #343381,#111111,#111111,#13174A, #ac5fdb);
    background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100%;
@@ -33,7 +34,18 @@ p {
   font-family: 'Montserrat', sans-serif;
   text-align: justify;
 }
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
 
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: red;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: red;
+}
 
 
 /************************************************************Navbar**********************************************************************/
@@ -177,6 +189,7 @@ p {
   border: none;
   border-radius: 5px;
   transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+  /* transition:cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s; */
 }
 .btn:hover{
   background-color: #ac5fdb;
@@ -393,18 +406,21 @@ p {
 }
 
 .searchbar-container{
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: baseline; */
 }
+
+
 .searchbar-form{
   width: 40vw;
   height: 30px ;
   /* margin-right: 100px; */
   min-width: 200px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+  margin-top: 10px;
   background: rgba(255, 255, 255, 0.336);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 20px );
@@ -433,9 +449,17 @@ input[type=number] {
   display: block;
 }
 
+
+
+.person-details{
+  margin-top: 20px;
+  overflow-x:auto
+}
+
 .person-detail-table{
   width: 100%;
   overflow-x: auto;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
 }
 .table-header{
   /* padding: 10px; */
@@ -466,6 +490,28 @@ input[type=number] {
 
 .table-btn-container{
   text-align: center;
+}
+
+.search-filter{
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.country-filter-btn{
+  font-size: small;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 5px;
+}
+
+.country-filter-btn-active{
+  /* font-size: small;
+  padding-left: 5px;
+  padding-right: 5px; */
+  margin: 5px;
+  background-color: #ac5fdb;
+  box-shadow: 0 0 5px #ac5fdb, 0 0 25px #ac5fdb;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 /************************************************************Details**********************************************************************/
 /************************************************************Search form******************************************************************/

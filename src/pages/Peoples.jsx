@@ -41,7 +41,6 @@ function Peoples() {
             <h3>Seed : {seed}</h3>
         </div>
         <div className='people-container'>
-          {/* <button className='btn' onClick={handleClick}>Get Some Peoples</button> */}
           {peoples.map((people,index)=>{
             const {gender, name, picture, dob, location} = people
             const {title, first, last} = name
@@ -58,7 +57,6 @@ function Peoples() {
                 <div className='people people-location'>{country}</div>
                 <div className='people people-age'>{age}</div>
                 <Link to={`/person/${seed}/${index}`}><button className='btn people-btn'>See more</button></Link>
-                {/* onClick={()=>{peopleInfo(seed,index)}} */}
               </div>
             )
           })}
